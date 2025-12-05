@@ -1,0 +1,4 @@
+# 例示（実ファイルパスではありません）
+* text=auto
+*.cpp text eol=crlf
+*.h   text eol=crlf
