@@ -10,7 +10,9 @@
 #include <cstdint>
 
 #if defined(_WIN32) || defined(_WIN64) || defined(WIN32) || defined(WIN64)
-  #define BREAD_TARGET_WIN
+  #ifndef BREAD_TARGET_WIN
+    #define BREAD_TARGET_WIN
+  #endif
   // SIMD 型を使う場合に備えてインクルード（コンパイラで未サポートなら無視される）
   #if defined(__GNUC__) || defined(__clang__) || defined(_MSC_VER)
     #include <immintrin.h>
